@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let body = document.querySelector("body");
+
+      // Creating Para using createElement
+      let para = document.createElement("p");
+      let para2 = document.createElement("p");
+      let para3 = document.createElement("p");
+      para.innerText = "Hello World";
+      para2.innerText = "Hello World at top";
+      para3.innerText = "Sahil";
+
+      // add element at end
+      body.appendChild(para);
+      // adding text also
+      para.append(" at bottom");
+
+      // add element at first
+      body.prepend(para2);
+
+      //   insert adjacent(where,element)
+      /*
+        beforebegin - before element at top
+        afterend - after element isself
+        beforeend - after last child
+        afterbegin - before element at end
+    */
+        // body.insertAdjacentElement("beforebegin",para3)
+        // body.insertAdjacentElement("afterend",para3)
+        body.insertAdjacentElement("beforeend",para3)
+        // body.insertAdjacentElement("afterbegin",para3)
+    </script>
+  </body>
+</html>

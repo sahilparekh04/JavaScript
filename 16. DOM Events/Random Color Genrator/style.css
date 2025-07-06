@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+p {
+  text-align: center;
+  font-weight: 500;
+}
+.color-box {
+  width: 300px;
+  height: 300px;
+  border: 3px solid black;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px 30px;
+}
+.btn{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: black;
+    border: 1px solid black;
+    height: 60px;
+    width: 140px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}

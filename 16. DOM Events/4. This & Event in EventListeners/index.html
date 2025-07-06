@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This in EventListeners</title>
+  </head>
+  <body>
+    <button id="btn">Click Me</button>
+
+    <script>
+      let btn = document.querySelector("#btn");
+
+      // Note: ()=>{} Arrow function not support this
+      btn.addEventListener("click", function (event) {
+        this.style.backgroundColor = "red";
+        console.log(event);
+      });
+    </script>
+  </body>
+</html>

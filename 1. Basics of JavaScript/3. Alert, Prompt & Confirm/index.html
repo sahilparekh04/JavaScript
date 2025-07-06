@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert, Prompt & Confirm</title>
+  </head>
+  <body>
+    <h1>Alert, Prompt & Confirm</h1>
+
+    <script>
+      // It is also part of BOM
+      let name = prompt("What is your name!");
+      let greet = alert(`Hello, ${name}`);
+      let age = prompt("What is your Age!");
+      let check = confirm(`Are you sure ${name} that you are ${age} year old?`);
+
+      console.log(`${name} is ${age} Year Old.`);
+    </script>
+  </body>
+</html>

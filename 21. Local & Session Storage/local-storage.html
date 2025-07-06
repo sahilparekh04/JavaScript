@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <script>
+      let name = "Sahil";
+      let score = 20;
+
+      // Inserting
+      // Inserting Data in localStorage
+      let scoreValue = localStorage.setItem("Score", score);
+      let NameValue = localStorage.setItem("Name", name);
+
+      // Get Data
+      // Retrive Data in localStorage
+      let valueScore = localStorage.getItem("Score");
+      let valueName = localStorage.getItem("Name");
+
+      console.log(valueScore);
+      console.log(valueName);
+
+      //   // Removing/Deleting
+      //   // Removing item
+      //   localStorage.removeItem("Score");
+      //   // Removing All Items
+      //   localStorage.clear();
+
+      // Checking Length of Keys
+      console.log(localStorage.length);
+      // Checking indivual key by index
+      console.log(localStorage.key(0));
+
+      // Storing Array/Objects in Local Storage
+      // Inserting
+      let arr = [1, 2, 3, 4, 5];
+      let obj = {
+        name: "Sahil",
+        age: 20,
+        course: "JavaScript",
+      };
+      localStorage.setItem("Array", JSON.stringify(arr));
+      localStorage.setItem("Object", JSON.stringify(obj));
+      // Retriving
+      let valueArr = JSON.parse(localStorage.getItem("Array"));
+      let valueObj = JSON.parse(localStorage.getItem("Object"));
+
+      console.log(valueArr);
+      console.log(valueObj);
+    </script>
+  </body>
+</html>

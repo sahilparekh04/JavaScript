@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling</title>
+    <style>
+      div {
+        background-color: aqua;
+        width: 200px;
+        height: 100px;
+      }
+      ul {
+        background-color: red;
+        width: 100px;
+      }
+      li {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+      </ul>
+    </div>
+
+    <script>
+      // Event bubbling is the problem when we perform action on nested element then it also call its parent element
+
+      let div = document.querySelector("div");
+      let ul = document.querySelector("ul");
+      let li = document.querySelector("li");
+
+      //   div.addEventListener("click", function () {
+      //     console.log("Div is Clicked");
+      //   });
+
+      //   ul.addEventListener("click", function () {
+      //     console.log("Ul is Clicked");
+      //   });
+
+      //   li.addEventListener("click", function () {
+      //     console.log("Li is Clicked");
+      //   });
+
+      // To Prevent this we can use event.propagation
+
+      div.addEventListener("click", function (e) {
+        e.stopPropagation();
+        console.log("Div is Clicked");
+      });
+
+      ul.addEventListener("click", function (e) {
+        e.stopPropagation();
+        console.log("Ul is Clicked");
+      });
+
+      li.addEventListener("click", function (e) {
+        e.stopPropagation();
+        console.log("Li is Clicked");
+      });
+    </script>
+  </body>
+</html>

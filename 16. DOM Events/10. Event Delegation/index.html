@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation</title>
+  </head>
+  <body>
+    <ul>
+      <li>Apple<button>Delete</button></li>
+      <li>Banna<button>Delete</button></li>
+      <li>Orange<button>Delete</button></li>
+      <li>Pinapple<button>Delete</button></li>
+    </ul>
+
+    <script>
+      let ul = document.querySelector("ul");
+      let lis = document.querySelectorAll("li");
+      let button = document.querySelector("button");
+
+      // ul.addEventListener("click", function (e) {
+      //   let btn = e.target;
+      //   let li = btn.parentElement;
+      //   // li.remove();
+      //   // or
+      //   ul.removeChild(li);
+      // });
+
+      //  querySelector return nodelist and addEventListener is method of element not of nodeList
+      for (const li of lis) {
+        li.addEventListener("click", function (e) {
+          l = e.target.parentElement;
+          // ul.removeChild(l);
+          // or
+          l.remove();
+        });
+      }
+    </script>
+  </body>
+</html>

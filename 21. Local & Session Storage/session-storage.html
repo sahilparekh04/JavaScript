@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage</title>
+  </head>
+  <body>
+    <script>
+      // Store for that particular tab session
+      let name = "Sahil";
+      let score = 20;
+
+      // Inserting
+      // Inserting Data in sessionStorage
+      let scoreValue = sessionStorage.setItem("Score", score);
+      let NameValue = sessionStorage.setItem("Name", name);
+
+      // Get Data
+      // Retrive Data in sessionStorage
+      let valueScore = sessionStorage.getItem("Score");
+      let valueName = sessionStorage.getItem("Name");
+
+      console.log(valueScore);
+      console.log(valueName);
+
+      //   // Removing/Deleting
+      //   // Removing item
+      //   sessionStorage.removeItem("Score");
+      //   // Removing All Items
+      //   sessionStorage.clear();
+
+      // Checking Length of Keys
+      console.log(sessionStorage.length);
+      // Checking indivual key by index
+      console.log(sessionStorage.key(0));
+
+      // Storing Array/Objects in Local Storage
+      // Inserting
+      let arr = [1, 2, 3, 4, 5];
+      let obj = {
+        name: "Sahil",
+        age: 20,
+        course: "JavaScript",
+      };
+      sessionStorage.setItem("Array", JSON.stringify(arr));
+      sessionStorage.setItem("Object", JSON.stringify(obj));
+      // Retriving
+      let valueArr = JSON.parse(sessionStorage.getItem("Array"));
+      let valueObj = JSON.parse(sessionStorage.getItem("Object"));
+
+      console.log(valueArr);
+      console.log(valueObj);
+    </script>
+  </body>
+</html>

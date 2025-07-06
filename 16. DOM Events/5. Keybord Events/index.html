@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keybord Events</title>
+  </head>
+  <body>
+    <form action="#">
+      <input type="text" />
+      <button>Click Me</button>
+    </form>
+
+    <script>
+      let inp = document.querySelector("input");
+
+      // keypress,keydown,keyup
+      // takes key and code from event argument.
+      inp.addEventListener("keypress", function (event) {
+        console.log("Key Pressed!");
+        console.dir(event);
+        console.log(`Key Code = ${event.code}`);
+        console.log(`Key = ${event.key}`);
+      });
+    </script>
+  </body>
+</html>
