@@ -38,3 +38,4 @@ console.log(objKeysAndValues);
 for (const element of objKeysAndValues) {
   console.log(element);
 }
+
