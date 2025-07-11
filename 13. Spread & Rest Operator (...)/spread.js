@@ -16,6 +16,12 @@ console.log(arr);
 console.log(Math.min(...arr));
 // 1.4 Finding maximum value of array using spread oprator
 console.log(Math.max(...arr));
+// 1.5 Merge two arrays;
+let arr3 = [...arr, ...newArr];
+console.log(arr3);
+// 1.6 Compose
+let arr4 = [100, ...arr, 200];
+console.log(arr4);
 
 // *******************************************************************************************
 
@@ -48,3 +54,6 @@ console.log(arrayOfObject);
 const str2 = "Hello World";
 const strObj = { ...str2 };
 console.log(strObj);
+// 3.5 Merge 2 obj
+let obj3 = { ...obj, ...copyObj2 };
+console.log(obj3);
