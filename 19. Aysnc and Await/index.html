@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Info</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      form {
+        margin: 10px 0 50px 0;
+      }
+      .box {
+        width: 100%;
+        border: 1px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .box-2 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .box > img {
+        width: 200px;
+      }
+      .container-box {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" id="user-input">
+      <input type="text" id="search" />
+      <input type="submit" id="submit" />
+    </form>
+    <div class="container-box"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
